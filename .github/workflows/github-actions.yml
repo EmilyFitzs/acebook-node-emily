@@ -19,4 +19,4 @@ jobs:
       run: | 
         rm -rf node_modules
         zip -r acebook.zip .
-        aws s3 cp ./acebook.zip s3://emily-acebook/
+        aws s3 sync . s3://emily-acebook
