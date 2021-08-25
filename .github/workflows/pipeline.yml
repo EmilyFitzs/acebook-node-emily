@@ -47,7 +47,6 @@ jobs:
         deploy-group: ['production']
         s3-bucket: ['emily-acebook']
         s3-filename: ['production-emily-acebook-${{ github.sha }}']
-    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
