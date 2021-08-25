@@ -18,5 +18,5 @@ hooks:
     - location: aws_scripts/start_server
       timeout: 3600
   ApplicationStop:
-    - location: aws_scripts/stop_server
+    - location: aws_scripts/stop_server.bashrc
       runas: ec2-user
