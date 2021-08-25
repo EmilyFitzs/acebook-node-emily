@@ -14,7 +14,7 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: scripts/start_app.sh
+    - location: aws_scripts/start_server
       timeout: 3600
   ApplicationStop:
     - location: aws_scripts/stop_server
