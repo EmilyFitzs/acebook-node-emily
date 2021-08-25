@@ -59,7 +59,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWSSECRET_KEY }}
         # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # if you have/need it
         aws-region: eu-west-2
-
      - name: AWS Deploy push
         run: |
           aws deploy push \
@@ -68,7 +67,6 @@ jobs:
           --ignore-hidden-files \
           --s3-location s3://${{ matrix.s3-bucket }}/${{ matrix.s3-filename }}.zip \
           --source .
-          
       # Create deployment to CodeDeploy
       - name: AWS Create Deployment
         run: |
