@@ -22,3 +22,6 @@ var PostsController = {
 };
 
 module.exports = PostsController;
+
+
+
