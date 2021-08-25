@@ -13,7 +13,19 @@ permissions:
       - directory
       - file
 hooks:
-  ApplicationStart:
-    - location: scripts/reload-pm2.sh
+  BeforeInstall:
+    - location: aws_scripts/install_dependencies
       timeout: 300
       runas: root
+  ApplicationStart:
+    - location: aws_scripts/start_server
+      timeout: 3600
+  ApplicationStop:
+    - location: aws_scripts/stop_server
+      runas: root
+
+
+  # ApplicationStart:
+  #   - location: scripts/reload-pm2.sh
+  #     timeout: 300
+  #     runas: root
