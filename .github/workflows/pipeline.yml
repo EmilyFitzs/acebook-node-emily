@@ -60,7 +60,7 @@ jobs:
         # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # if you have/need it
         aws-region: eu-west-2
 
-     - name: AWS Deploy push
+    - name: AWS Deploy push
         run: |
           aws deploy push \
           --application-name ${{ matrix.appname }} \
@@ -69,8 +69,8 @@ jobs:
           --s3-location s3://${{ matrix.s3-bucket }}/${{ matrix.s3-filename }}.zip \
           --source .
       # Create deployment to CodeDeploy
-      
-      - name: AWS Create Deployment
+
+    - name: AWS Create Deployment
         run: |
           aws deploy create-deployment \
            --application-name ${{ matrix.appname }} \
