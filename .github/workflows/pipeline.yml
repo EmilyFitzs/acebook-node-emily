@@ -43,10 +43,10 @@ jobs:
       matrix:
         python-version: [3.8]
         node-version: ['12.x']
-        appname: ['emily-acebook']
+        appname: ['ef-acebook']
         deploy-group: ['production']
-        s3-bucket: ['emily-acebook']
-        s3-filename: ['production-emily-acebook-${{ github.sha }}']
+        s3-bucket: ['ef-s3-bucket']
+        s3-filename: ['production-ef-s3-bucket${{ github.sha }}']
 
     steps:
     - name: Checkout
